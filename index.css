@@ -1,0 +1,7 @@
+*{
+    cursor: url('bald eagle.png'), pointer;
+    align-items: center;
+
+}
+body{
+    background-image: url('votebackground.jpg');
