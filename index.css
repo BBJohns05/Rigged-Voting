@@ -1,7 +1,28 @@
 *{
     cursor: url('bald eagle.png'), pointer;
-    align-items: center;
-
+    text-align: center;
 }
 body{
     background-image: url('votebackground.jpg');
+}
+img{
+    justify-content: center;
+    border-radius: 5%;
+    padding: 5%;
+}
+button{
+    color:black;
+    background-color: white;
+    border-color: transparent;
+    border-radius:25%;
+    height: 5%;
+    width: 10%;
+
+}
+h1{
+    color:white;
+}
+#johnson{
+    margin-bottom: 5%;
+    margin-left: 15%;
+}
