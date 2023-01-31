@@ -12,12 +12,46 @@ var should_play=true
 
     }
 
-const space = document.querySelector(".space")    
-const johnson = document.querySelector(".johnson");
+//randomize johnson button when hovered over
 
-johnson.addEventListener("moseover", () => {
-    const i = math.floor(Math.random() * space.width - johnson.width)+1;
-    const j = Math.floor(Math.random() * space.height - johnson.height)+1;
-    johnson.style.left= i + 'px';
-    joshnson.style.top= j + 'px';
-})    
+johnson.onmouseover=function(event){
+    
+    console.log('works')//window-realative field coordinates
+    let fieldCoords= this.getBoundingClientRect();
+
+    //the johnson has position: absoulte, the field poistion: relative
+    //so johnson coordinates are realtive to the field inner left-upper corner
+    let johnsonCoords={
+        top: Math.random()*1000,
+        // event.clientY - fieldCoords.top - field.clientTop - johnson.clientHeight / 2 - 10, 
+        left: Math.random()*1000,
+        // event.clientX - fieldCoords.left - field.clientTop - johnson.clientWidth / 2 - 7, 
+    }
+
+//prevent crossing the top field boundary
+if(johnsonCoords.top < 0){johnsonCoords.top=0}
+//prevent corssing the left field boundry
+if(johnsonCoords.left <0){johnsonCoords.left=0}
+//prevent corssing the left field boundry
+if(johnsonCoords.top + johnson.clientHeight > field.clientHeight){
+    johnsonCoords.top = field.clientHeight - johnson.clientHeight;
+}
+//prevent corssing the left field boundryS
+if(johnsonCoords.left + johnson.clientWidth > field.clientWidth){
+    johnsonCoords.left = field.clientWidth - johnson.clientWidth;
+}
+johnson.style.left = johnsonCoords.left + 'px'
+johnson.style.top = johnsonCoords.top + 'px'
+}
+
+//disable context menu
+
+window.addEventListener("contextmenu", e => e.preventDefault());
+
+//onload event
+
+document.getElementById().addEventListener("load", myFunction);
+
+function myFunction() {
+    alert("secure voting website")
+  }

@@ -5,11 +5,6 @@
 body{
     background-image: url('votebackground.jpg');
 }
-img{
-    justify-content: center;
-    border-radius: 5%;
-    padding: 5%;
-}
 button{
     color:black;
     background-color: white;
@@ -25,4 +20,36 @@ h1{
 #johnson{
     margin-bottom: 5%;
     margin-left: 15%;
+    position: absolute;    
+    top: 400px;
+    right: 480px
+}
+
+#field{
+    width: 98vw;
+    height: 98vh;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+#johnsonpic{
+    justify-content: center;
+    border-radius: 5%;
+    padding: 5%;
+}
+
+#nixonpic{
+    justify-content: center;
+    border-radius: 5%;
+    padding: 5%;
+
+}
+
+#nixon{
+    margin-bottom: 5%;
+    margin-left: 15%;
+    position: absolute;
+    top: 400px;
+    left: 240px
 }
